@@ -46,7 +46,4 @@ npm i react-icons react-router-dom
 Start the server
 ```bash
   npm start
-```
-# `Live Demo` 
-## Check out the latest demo of Project [TechVenture](https://tech-venture.netlify.app/). 
- 
+``` 
