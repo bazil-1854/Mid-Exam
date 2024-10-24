@@ -5,10 +5,10 @@ const Favourite = () => {
   const { movie, removeFromCart } = useContext(FavuoriteThemeContext);
 
   return (
-    <div className="p-4">
+    <div className="p-4 min-h-screen">
       <h2 className="text-2xl mb-4">Cart</h2>
       {movie.length === 0 ? (
-        <p>No Favuorite movies.</p>
+        <p className='text-red-300 mt-[15px]'>No Favuorite movies.</p>
       ) : (
         <div className="grid xl xl:grid-cols-4 w-full lg:grid-cols-3 md-grid-cols-2 grid-cols-1">
           {movie.map(movieDetails => (
