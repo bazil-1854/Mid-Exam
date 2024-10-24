@@ -57,12 +57,13 @@ const SearchFilter = () => {
                                             src={movie.cover}
                                             alt={movie.name}
                                             className="object-cover mx-auto h-[200px] w-[180px] hover:scale-105 transition duration-700  md:h-[400px] md:w-[340px] lg:w-[300px]  lg:h-[335px] sm:h-[320px] sm:w-[280px] mb-4"
-                                        />
+                                        /> 
 
-                                        <h2>{movie.name}</h2>
-                                        <p>genre: {movie.genre}</p>
-                                        <p>{movie.type}</p>
-                                        <p>Status: {movie.type ? 'Active' : 'Inactive'}</p>
+                                        <h2 className='font-[500]'>{movie.name}</h2>
+                                        <p className='text-blue-700 text-[12px] font-[500] underline'>{movie.genre}</p>
+                                        <p className='text-blue-700 text-[12px] font-[500] underline'>{movie.type}</p>
+                                        <p className={`${movie.type === "Action" ? 'bg-red-600' : 'bg-green-700'} text-white text-center text-[10px] mb-[15px] py-[2px] mt-[5px] rounded-lg w-[80px]`}>{movie.type}</p>
+
                                     </div>
                                 );
                             })

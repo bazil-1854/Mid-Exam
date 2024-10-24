@@ -1,5 +1,5 @@
-# TechVenture
-#### A simple movie app having features of listing movies, adding favourites ones and search them accordingly
+# Movie
+A simple movie app having features of listing movies, adding favourites ones and search them accordingly
 
 # Run Locally
 

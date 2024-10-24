@@ -32,7 +32,7 @@ const MovieDetail = () => {
                     onClick={() => addToCart(movieDetails)}
                     className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
                 >
-                    Add to Cart
+                    Add to Favourites
                 </button>
             </div>
         </div>

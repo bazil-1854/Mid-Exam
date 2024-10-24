@@ -46,7 +46,7 @@ const Footer = () => {
 
       <div className='col-span-3 flex flex-col '>
         <p className='bg-gray-800 rounded-lg w-[95%] h-[4px] my-[15px]'></p>
-        <p className='text-center text-lg  text-white  mb-[25px]'>@2024 TechVenture, All Rights Reserved  </p>
+        <p className='text-center text-lg  text-white  mb-[25px]'>@2024 MovieApp, All Rights Reserved  </p>
       </div>
     </footer>
   )
