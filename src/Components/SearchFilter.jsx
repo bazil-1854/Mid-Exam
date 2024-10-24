@@ -25,9 +25,9 @@ const SearchFilter = () => {
         setIsFocused(!isFocused);
     };
     return (
-        <div className='pt-[70px] w-screen overflow-x-hidden'>
+        <div className='pt-[70px] min-h-screen w-screen overflow-x-hidden'>
 
-            <div className='w-[100%]  mt-[15px] flex justify-center mx-[5px] mb-[25px] p-[4px]'>
+            <div className='w-[100%]  mt-[25px] flex justify-center mx-[5px] mb-[25px] p-[4px]'>
                 <input
                     id="search"
                     type="text"

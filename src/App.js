@@ -8,6 +8,7 @@ import MovieDetail from "./Components/MovieDetail";
 import Favourite from "./Components/Favourite";
 import { FavuoriteThemeProvider } from "./ContextProvider";
 import SearchFilter from "./Components/SearchFilter";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/search-movies" element={<SearchFilter />} />
         </Routes>
       </Router>
+      <Footer />
     </FavuoriteThemeProvider>
   );
 };
