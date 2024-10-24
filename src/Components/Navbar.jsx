@@ -45,12 +45,9 @@ const Navbar = () => {
             <div className="relative bg-black md:hidden">
                 <div className="flex items-center justify-between px-4 py-3 relative">
                     <div className="flex items-center z-60">
-                        <div className="mr-[4px] flex items-center justify-center overflow-hidden" style={{ width: '33px', height: '33px' }}>
-                            <img src="sd" alt="Logo" className="w-full h-full object-contain" />
-                        </div>
                         <div className="h-16 flex items-center justify-center">
                             <Link to="/" className="text-gray-200 text-[23px] font-bold text-center w-full tracking-tight scale-x-[0.9] scale-y-110">
-                                Movie APp
+                                Movie APP
                             </Link>
                         </div>
                     </div>
@@ -66,16 +63,12 @@ const Navbar = () => {
                         <div className="fixed inset-0 bg-black flex flex-col h-screen py-3 z-40">
                             <div className='flex  px-4 justify-between items-center'>
                                 <div className="flex items-center z-60">
-                                    <div className="mr-[4px] flex items-center justify-center overflow-hidden" style={{ width: '33px', height: '33px' }}>
-                                        <img src="sd" alt="Logo" className="w-full h-full object-contain" />
-                                    </div>
                                     <div className="h-16 flex items-center justify-center">
                                         <Link to="/" className="text-gray-200 text-[23px] font-bold text-center w-full tracking-tight scale-x-[0.9] scale-y-110">
-                                            ENTITYSAFE
+                                            MovieApp
                                         </Link>
                                     </div>
                                 </div>
-
                                 <div className="cursor-pointer text-gray-300" onClick={handleMenuToggle}>
                                     <IoClose size={35} />
                                 </div>
@@ -84,22 +77,23 @@ const Navbar = () => {
                             <div className='my-[25px]'></div>
                             <div className="flex flex-col mt-10">
                                 <Link
-                                    to="/discover"
-                                    className="font-medium w-full text-gray-100 mx-auto py-[5px] pl-[15px] text-[18px] border-b-[3px] border-gray-200 mb-[15px] cursor-pointer"
+                                    to="/"
+                                    className="font-medium w-full text-gray-100 mx-auto py-[5px] pl-[15px] text-[18px] border-b-[3px] border-gray-600 mb-[15px] cursor-pointer"
                                     onClick={handleMenuToggle}
                                 >
-                                    Discover
+                                    Movies
                                 </Link>
                                 <Link
-                                    to="/apps"
-                                    className="font-medium w-[85%] rounded-lg bg-gray-700 mx-auto py-[5px] pl-[15px] text-[18px] text-slate-300 mb-[15px] cursor-pointer"
+                                    to="/favourites"
+                                    className="font-medium w-full text-gray-100 mx-auto py-[5px] pl-[15px] text-[18px] border-b-[3px] border-gray-600 mb-[15px] cursor-pointer"
                                     onClick={handleMenuToggle}
                                 >
-                                    Apps
+                                    Favourites
                                 </Link>
+
                             </div>
 
-                            <div className="flex mx-auto w-[85%] items-center bg-search-color my-[15px] rounded-3xl border border-gray-500 p-[10px]">
+                            <Link to="/search-movies" className="flex mx-auto w-[85%] items-center bg-search-color my-[15px] rounded-3xl border border-gray-500 p-[10px]">
                                 <IoSearchOutline size={25} className="text-white mr-2" />
                                 <input
                                     type="text"
@@ -108,7 +102,7 @@ const Navbar = () => {
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
-                            </div>
+                            </Link>
                         </div>
                     )}
                 </div>

@@ -10,24 +10,26 @@ const Favourite = () => {
       {movie.length === 0 ? (
         <p>No Favuorite movies.</p>
       ) : (
-        <ul className="space-y-2">
+        <div className="grid xl xl:grid-cols-4 w-full lg:grid-cols-3 md-grid-cols-2 grid-cols-1">
           {movie.map(movieDetails => (
-            <li key={movieDetails.id} className="flex justify-between items-center p-2 border rounded-md"> 
+            <div key={movieDetails.id} className="mt-[10px]">
               <img src={movieDetails.cover} alt="" />
-                <h2>{movieDetails.name}</h2>
-                <p>genre: {movieDetails.genre}</p>
-                <p>{movieDetails.type}</p>
+
+              <h2 className='font-[500]'>{movieDetails.name}</h2>
+              <p className='text-blue-700 text-[12px] font-[500] underline'>{movieDetails.genre}</p>
+              <p className={`${movie.type === "Action" ? 'bg-red-600' : 'bg-green-700'} text-white text-center text-[10px] mb-[15px] py-[2px] mt-[5px] rounded-lg w-[80px]`}>{movieDetails.type}</p>
+
               <div className="flex space-x-2">
-                <button 
-                  onClick={() => removeFromCart(movieDetails.id)} 
-                  className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
+                <button
+                  onClick={() => removeFromCart(movieDetails.id)}
+                  className="bg-red-500 text-white px-3 py-1 text-[15px] rounded-[18px] hover:bg-red-600 transition"
                 >
                   Remove from Favourites
                 </button>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
