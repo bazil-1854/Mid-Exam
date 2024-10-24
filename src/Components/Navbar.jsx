@@ -4,6 +4,7 @@ import { IoMenu, IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { FavuoriteThemeContext } from '../ContextProvider';
 import { CiLight } from 'react-icons/ci';
+import { MdOutlineDarkMode } from 'react-icons/md';
 
 const Navbar = () => {
 
@@ -31,11 +32,11 @@ const Navbar = () => {
                     </p>
                 </Link>
                 <div className='flex'>
-                    <button className='text-white' onClick={toggleTheme}><CiLight size={35}/></button>
-                    <div className="w-[230px] mr-[15px] px-[15px] py-[8px] rounded-xl text-[#969696] flex items-center bg-[#5454547c]">
+                    <button className='text-white' onClick={toggleTheme}> {theme === 'light' ? <CiLight size={35} /> : <MdOutlineDarkMode t size={35} />} </button>
+                    <Link to="/search-movies" className="w-[230px] mr-[15px] px-[15px] py-[8px] rounded-xl text-[#969696] flex items-center bg-[#5454547c]">
                         <IoMdSearch size={23} className='mt-[3px]' />
                         <span className='ml-[6px] text-[#999999] '>Search moview ....</span>
-                    </div>
+                    </Link>
                 </div>
 
             </div>

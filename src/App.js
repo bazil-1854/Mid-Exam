@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import MovieDetail from "./Components/MovieDetail";
 import Favourite from "./Components/Favourite";
 import { FavuoriteThemeProvider } from "./ContextProvider";
+import SearchFilter from "./Components/SearchFilter";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/favourites" element={<Favourite />} />
           <Route path="/movie-detail/:id" element={<MovieDetail />} />
+          <Route path="/search-movies" element={<SearchFilter />} />
         </Routes>
       </Router>
     </FavuoriteThemeProvider>
