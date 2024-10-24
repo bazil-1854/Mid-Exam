@@ -10,8 +10,7 @@ const MovieDetail = () => {
 
     const { addToCart } = useContext(FavuoriteThemeContext);
     useEffect(() => {
-        let movie;
-
+        let movie; 
         //movie = movieDetails.filter(moviedet => moviedet.id === id);
         movie = movies[id - 1];
         //console.log(movieDetails);
@@ -30,7 +29,7 @@ const MovieDetail = () => {
                 <p>Status: {movieDetails.type ? 'Active' : 'Inactive'}</p>
                 <button
                     onClick={() => addToCart(movieDetails)}
-                    className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
+                    className="bg-yellow-700 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
                 >
                     Add to Favourites
                 </button>
